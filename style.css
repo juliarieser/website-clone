@@ -1,0 +1,12 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#vorlage {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
