@@ -1,30 +1,187 @@
+/*Vorlage im Hintergrund*/
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 60px 500px 140px 500px 490px 100px 35px;
-}
-
 #vorlage {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   opacity: 0.4;
 }
 
+/*Grid-Display, Schriftart*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 500px 140px 630px 580px 80px 35px;
+  font-family: Roboto, sans-serif;
+  color: #898989;
+}
+
+/*nav-Element am oberen Rand*/
 nav {
   grid-area: 1 / 2 / 2 / 1;
+  background-color: #f4e5c8;
 }
 
 nav ul {
   grid-area: 2 / 2 / 3 / 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+
   list-style: none;
-  margin-left: 190px;
+  margin-top: 22px;
+  margin-left: 170px;
+  margin-right: 510px;
+  font-size: 0.75em;
+}
+
+/*hero-Image*/
+#hero {
+  grid-row: 2;
+  background-image: url(images/hero.jpg);
+}
+
+/*Willkommensschriftzug*/
+#welcome {
+  display: flex;
+  justify-content: center;
+  margin-top: 190px;
+  font-family: MeriendaOne;
+  font-size: 2.6em;
+  color: #777777;
+  text-shadow: 0px 2px 0px #ffffff, 0px -2px 0px #ffffff, 2px 0px 0px #ffffff,
+    -2px 0px 0px #ffffff, 0px 0px 10px #777777;
+}
+
+/*Anfrage-Button*/
+#button {
+  margin-left: 620px;
+  margin-top: 40px;
+  padding: 10px 30px 10px 30px;
+  font-family: Roboto;
+  font-size: 1.1em;
+  background-color: #f4e5c8;
+  border: none;
+  color: #898989;
+}
+
+/*Trennung zwischen Hero und Content*/
+#spacer {
+  grid-row: 3;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eccee0;
+}
+
+#spacer img {
+  width: 300px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 225px;
+}
+
+#spacer h1 {
+  font-family: MeriendaOne;
+  color: #777777;
+  font-size: 2.2em;
+  margin-top: 40px;
+  margin-right: 140px;
+}
+
+/*erster Content-Abschnitt*/
+#content1 {
+  display: flex;
+  grid-row: 4;
+  background-color: #f4e5c8;
+}
+
+#content1 img {
+  width: 760px;
+}
+
+#text1 h2 {
+  font-family: MeriendaOne;
+  font-size: 3.1em;
+  color: #6b5038;
+  margin-top: 125px;
+  margin-left: 165px;
+}
+
+#text1 p {
+  font-family: Roboto;
+  font-size: 20px;
+  color: #000;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+
+#button1 {
+  background: none;
+  border-color: #d7c2a5;
+  font-family: Roboto;
+  font-size: 1.05em;
+  color: #6b5038;
+  padding: 15px 30px 15px 30px;
+  margin-left: 250px;
+  margin-top: 55px;
+}
+
+/*zweiter Content-Abschnitt*/
+#content2 {
+  display: flex;
+  grid-row: 5;
+  background-color: #ffdd94;
+}
+
+#content2 img {
+  width: 760px;
+  margin-left: 760px;
+}
+
+#text2 p {
+  font-family: Roboto;
+  font-size: 20px;
+  color: #000;
+  margin-top: 150px;
+  margin-left: 45px;
+  margin-bottom: -413px;
+  width: 660px;
+}
+
+/*Informationen, Impressum*/
+#info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Roboto;
+  color: #ffffff;
+  background-color: #555;
+  padding-top: 22px;
+}
+
+/*Credit*/
+#credit {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 0.75em;
+  color: #fff;
+  background-color: #333;
+  padding-top: 10px;
+}
+
+/*import of the needed font*/
+@font-face {
+  font-family: Roboto;
+  src: url(images/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: MeriendaOne;
+  src: url(images/MeriendaOne-Regular.ttf);
 }
